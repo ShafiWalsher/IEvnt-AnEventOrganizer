@@ -37,8 +37,14 @@ const Checkout = ({ event, userId }: { event: IEvent; userId: string }) => {
     await checkoutOrder(order);
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Call your onCheckout function here
+    await onCheckout();
+  };
+
   return (
-    <form action={onCheckout} method="post">
+    <form onSubmit={handleSubmit} method="post">
       <Button type="submit" role="link" size="lg" className="button sm:w-fit">
         {event.isFree ? "Get Ticket" : "Buy Ticket"}
       </Button>
