@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import toast, { Toaster } from "react-hot-toast";
 
 // For User Authentication
 import { ClerkProvider } from "@clerk/nextjs";
@@ -27,7 +28,24 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={poppins.variable}>{children}</body>
+        <body className={poppins.variable}>
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+            gutter={8}
+            containerClassName=""
+            containerStyle={{}}
+            toastOptions={{
+              className: "",
+              duration: 3000,
+              style: {
+                background: "#F6F8FD",
+                color: "rgba(0,0,0,0.85)",
+              },
+            }}
+          />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );

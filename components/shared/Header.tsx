@@ -13,7 +13,7 @@ const Header = () => {
         <Link href="/">
           <Image
             src="/assets/images/logo-dark.svg"
-            alt="iEvnt-logo"
+            alt="logo"
             width={128}
             height={38}
           />

@@ -29,6 +29,7 @@ import { Checkbox } from "../ui/checkbox";
 import { useRouter } from "next/navigation";
 import { createEventDoc, updateEventDoc } from "@/lib/actions/event.actions";
 import { IEvent } from "@/lib/database/models/event.model";
+import toast from "react-hot-toast";
 
 type EventFormProps = {
   userId: string;
@@ -79,10 +80,12 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
 
         if (newEvent) {
           form.reset();
+          toast.success("Event Created successfully");
           router.push(`/events/${newEvent._id}`);
         }
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        toast.error("Event Creation Failed, Try again later!.");
       }
     }
 
@@ -101,10 +104,12 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
 
         if (updatedEvent) {
           form.reset();
+          toast.success("Event Updated successfully");
           router.push(`/events/${updatedEvent._id}`);
         }
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        toast.error("Event Update Failed, Try again later!.");
       }
     }
   }
