@@ -22,7 +22,7 @@ const EventDetails = async ({
     page: searchParams.page as string,
   });
 
-  console.log(event);
+  // console.log(event);
   return (
     <>
       <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
@@ -139,7 +139,7 @@ const EventDetails = async ({
           emptyStateSubtext="Come Back Later!."
           collectionType="All_Events"
           limit={6}
-          page={1}
+          page={searchParams.page as string}
           totalPages={relatedEvents?.totalPages}
         />
       </section>

@@ -44,7 +44,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
     });
   };
 
-  // Loac all the categoris on page Load
+  // Load all the categoris on page Load
   useEffect(() => {
     const getCategories = async () => {
       const categoryList = await getAllCategories();
