@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   return (
     <header className="w-full border-b">
-      <div className="bg-gray-100 w-full text-sm py-1 flex justify-end px-80">
+      <div className="bg-gray-100 w-full text-sm py-1 flex justify-center lg:justify-end lg:px-80">
         Give it a Star ⭐. &nbsp;
         <Link
           href="https://github.com/ShafiWalsher/IEvnt-AnEventOrganizer"
