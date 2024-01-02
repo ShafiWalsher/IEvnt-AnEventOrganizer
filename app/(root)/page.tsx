@@ -1,9 +1,9 @@
 import CategoryFilter from "@/components/shared/CategoryFilter";
 import Collections from "@/components/shared/Collections";
+import FeedbackDialog from "@/components/shared/FeedbackDialog";
 import Search from "@/components/shared/Search";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.actions";
-import { connectToDatabase } from "@/lib/database";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,17 +69,11 @@ export default async function Home({ searchParams }: SearchParamProps) {
           totalPages={events?.totalPages}
         />
       </section>
+
+      {/* Feedback Button */}
       <div className="relative opacity-80 hover:opacity-100 transition-all duration-100 cursor-pointer z-20">
         <div className="fixed bottom-6 right-4 p-2 bg-primary-500 rounded-xl">
-          <div className="flex gap-2 p-medium-16 text-primary-50">
-            <p>Any Feedbacks?</p>
-            <Image
-              src="/assets/icons/feedback.png"
-              alt="feedback"
-              width={24}
-              height={24}
-            />
-          </div>
+          <FeedbackDialog />
         </div>
       </div>
     </>

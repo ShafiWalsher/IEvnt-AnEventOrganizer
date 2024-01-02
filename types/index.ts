@@ -147,3 +147,9 @@ export type SearchParamProps = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+// ====== FEEDBACK PARAMS
+export type CreateFeedbackParams = {
+  name: string;
+  message: string;
+};
