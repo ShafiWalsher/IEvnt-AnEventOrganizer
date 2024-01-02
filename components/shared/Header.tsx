@@ -9,6 +9,17 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   return (
     <header className="w-full border-b">
+      <div className="bg-gray-100 w-full text-sm py-1 flex justify-end px-80">
+        Give it a Star ⭐. &nbsp;
+        <Link
+          href="https://github.com/ShafiWalsher/IEvnt-AnEventOrganizer"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary-500 font-medium"
+        >
+          Github Repository 🡵
+        </Link>
+      </div>
       <div className="wrapper flex items-center justify-between">
         <Link href="/">
           <Image

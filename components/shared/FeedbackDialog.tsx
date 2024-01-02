@@ -23,7 +23,7 @@ const FeedbackDialog = () => {
           />
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] w-[380px] bg-primary-50">
+      <DialogContent className="bg-primary-50">
         <DialogHeader>
           <DialogTitle className="h3-medium">Feedback</DialogTitle>
           <DialogDescription>
